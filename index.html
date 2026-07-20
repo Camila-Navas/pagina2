@@ -1,540 +1,150 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="es" data-theme="light">
 <head>
-  <title>Pagina2</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Galería interactiva de personajes de Dragon Ball — pieza de portafolio front-end con HTML, CSS y JavaScript puro.">
+  <title>DB Gallery — Portafolio</title>
+  <script>
+    (function () {
+      try {
+        var stored = localStorage.getItem("db-gallery-theme");
+        var theme =
+          stored === "light" || stored === "dark"
+            ? stored
+            : window.matchMedia("(prefers-color-scheme: dark)").matches
+              ? "dark"
+              : "light";
+        document.documentElement.setAttribute("data-theme", theme);
+      } catch (e) { /* localStorage bloqueado */ }
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="main.css">
 </head>
-
-
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="../proyecto/index.html">Inicio</a></li>
-      </ul>
-    </nav>
-  </header>
+  <a class="skip-link" href="#main">Saltar al contenido</a>
 
-  <main>
+  <header class="header">
+    <div class="header__inner">
+      <a class="header__brand" href="#main">DB Gallery</a>
 
-    <section class="container">
-      <article class="card">
-        <img src="IMG/14Dokkan.webp" alt="400">
-        <div class="contenido">
-          <h3>Inicio</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam alias commodi maiores aperiam ipsum
-            magnam similique.</p>
-          <a href="#"></a>
-      </article>
+      <div class="header__actions">
+        <button
+          class="btn btn--icon"
+          type="button"
+          id="theme-toggle"
+          aria-pressed="false"
+          aria-label="Activar modo oscuro"
+        >
+          <span class="btn__icon btn__icon--sun" aria-hidden="true">☀</span>
+          <span class="btn__icon btn__icon--moon" aria-hidden="true">☾</span>
+        </button>
 
-      <article class="card">
-        <img src="IMG/15Dokkan.webp" alt="400">
-        <div class="contenido">
-          <h3>Inicio</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam alias commodi maiores aperiam ipsum
-            magnam similique.</p>
-          <a href="#"></a>
-      </article>
-
-      <article class="card">
-        <img src="IMG/17_Artwork.webp" alt="400">
-        <div class="contenido">
-          <h3>Inicio</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam alias commodi maiores aperiam ipsum
-            magnam similique.</p>
-          <a href="#"></a>
-      </article>
-
-      <article class="card">
-        <img src="IMG/Android19.webp" alt="400">
-        <div class="contenido">
-          <h3>Inicio</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam alias commodi maiores aperiam ipsum
-            magnam similique.</p>
-          <a href="#"></a>
-      </article>
-
-      <article class="card">
-        <img src="IMG/Androide_16.webp" alt="400">
-        <div class="contenido">
-          <h3>Inicio</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam alias commodi maiores aperiam ipsum
-            magnam similique.</p>
-          <a href="#"></a>
-      </article>
-
-      <article class="card">
-        <img src="IMG/Androide_18_Artwork.webp" alt="400">
-        <div class="contenido">
-          <h3>Inicio</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam alias commodi maiores aperiam ipsum
-            magnam similique.</p>
-          <a href="#"></a>
-      </article>
-
-      <article class="card">
-        <img src="IMG/Androide13normal.webp" alt="400">
-        <div class="contenido">
-          <h3>Inicio</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam alias commodi maiores aperiam ipsum
-            magnam similique.</p>
-          <a href="#"></a>
-      </article>
-
-      <article class="card">
-        <img src="IMG/zarbon.webp" alt="400">
-        <div class="contenido">
-          <h3>Inicio8</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam alias commodi maiores aperiam ipsum
-            magnam similique.</p>
-          <a href="#"></a>
-      </article>
-
-      <article class="card">
-        <img src="IMG/Babidi_Artwork.webp" alt="400">
-        <div class="contenido">
-          <h3>Inicio</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam alias commodi maiores aperiam ipsum
-            magnam similique.</p>
-          <a href="#"></a>
-      </article>
-
-      <article class="card">
-        <img src="IMG/Bardock_Artwork.webp" alt="400">
-        <div class="contenido">
-          <h3>Inicio</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam alias commodi maiores aperiam ipsum
-            magnam similique.</p>
-          <a href="#"></a>
-      </article>
-
-      <article class="card">
-        <img src="IMG/Beerus_DBS_Broly_Artwork.webp" alt="400">
-        <div class="contenido">
-          <h3>Inicio</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam alias commodi maiores aperiam ipsum
-            magnam similique.</p>
-          <a href="#"></a>
-      </article>
-
-      <article class="card">
-        <img src="IMG/bulma.webp" alt="400">
-        <div class="contenido">
-          <h3>Inicio</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam alias commodi maiores aperiam ipsum
-            magnam similique.</p>
-          <a href="#"></a>
-      </article>
-
-      <article class="card">
-        <img src="IMG/BuuGordo_Universo7.webp" alt="400">
-        <div class="contenido">
-          <h3>Inicio</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam alias commodi maiores aperiam ipsum
-            magnam similique.</p>
-          <a href="#"></a>
-      </article>
-
-      <article class="card">
-        <img src="IMG/celula.webp" alt="400">
-        <div class="contenido">
-          <h3>Inicio</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam alias commodi maiores aperiam ipsum
-            magnam similique.</p>
-          <a href="#"></a>
-      </article>
-
-      <article class="card">
-        <img src="IMG/ChiChi_DBS.webp" alt="400">
-        <div class="contenido">
-          <h3>Inicio</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam alias commodi maiores aperiam ipsum
-            magnam similique.</p>
-          <a href="#"></a>
-      </article>
-
-      <article class="card">
-        <img src="IMG/Dende_Artwork.webp" alt="400">
-        <div class="contenido">
-          <h3>Inicio</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam alias commodi maiores aperiam ipsum
-            magnam similique.</p>
-          <a href="#"></a>
-      </article>
-
-      <article class="card">
-        <img src="IMG/Dispo_render.webp" alt="400">
-        <div class="contenido">
-          <h3>Inicio</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam alias commodi maiores aperiam ipsum
-            magnam similique.</p>
-          <a href="#"></a>
-      </article>
-
-      <article class="card">
-        <img src="IMG/dodoria.webp" alt="400">
-        <div class="contenido">
-          <h3>Inicio</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam alias commodi maiores aperiam ipsum
-            magnam similique.</p>
-          <a href="#"></a>
-      </article>
-
-      <article class="card">
-        <img src="IMG/Dr._Gero nadroide 20.webp" alt="400">
-        <div class="contenido">
-          <h3>Inicio</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam alias commodi maiores aperiam ipsum
-            magnam similique.</p>
-          <a href="#"></a>
-      </article>
-
-      <article class="card">
-        <img src="IMG/Final_Yamcha.webp" alt="400">
-        <div class="contenido">
-          <h3>Inicio</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam alias commodi maiores aperiam ipsum
-            magnam similique.</p>
-          <a href="#"></a>
-      </article>
-
-      <article class="card">
-        <img src="IMG/Freezer.webp" alt="400">
-        <div class="contenido">
-          <h3>Inicio</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam alias commodi maiores aperiam ipsum
-            magnam similique.</p>
-          <a href="#"></a>
-      </article>
-
-      <article class="card">
-        <img src="IMG/ginyu.webp" alt="400">
-        <div class="contenido">
-          <h3>Inicio</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam alias commodi maiores aperiam ipsum
-            magnam similique.</p>
-          <a href="#"></a>
-      </article>
-
-      <article class="card">
-        <img src="IMG/ginyu_force.webp" alt="400">
-        <div class="contenido">
-          <h3>Inicio</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam alias commodi maiores aperiam ipsum
-            magnam similique.</p>
-          <a href="#"></a>
-      </article>
-
-      <article class="card">
-        <img src="IMG/gohan.webp" alt="400">
-        <div class="contenido">
-          <h3>Inicio</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam alias commodi maiores aperiam ipsum
-            magnam similique.</p>
-          <a href="#"></a>
-      </article>
-
-      <article class="card">
-        <img src="IMG/gohan.webp" alt="400">
-        <div class="contenido">
-          <h3>Inicio</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam alias commodi maiores aperiam ipsum
-            magnam similique.</p>
-          <a href="#"></a>
-      </article>
-
-      <article class="card">
-        <img src="IMG/goku_normal.webp" alt="400">
-        <div class="contenido">
-          <h3>Inicio</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam alias commodi maiores aperiam ipsum
-            magnam similique.</p>
-          <a href="#"></a>
-      </article>
-
-      <article class="card">
-        <img src="IMG/Gotenks_Artwork.webp" alt="400">
-        <div class="contenido">
-          <h3>Inicio</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam alias commodi maiores aperiam ipsum
-            magnam similique.</p>
-          <a href="#"></a>
-      </article>
-
-      <article class="card">
-        <img src="IMG/Gran_Kaio-shin_Artwork.webp" alt="400">
-        <div class="contenido">
-          <h3>Inicio</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam alias commodi maiores aperiam ipsum
-            magnam similique.</p>
-          <a href="#"></a>
-      </article>
-
-      <article class="card">
-        <img src="IMG/Gran_kaio_sama12.webp" alt="400">
-        <div class="contenido">
-          <h3>Inicio</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam alias commodi maiores aperiam ipsum
-            magnam similique.</p>
-          <a href="#"></a>
-      </article>
-
-      <article class="card">
-        <img src="IMG/Grand priest.webp" alt="400">
-        <div class="contenido">
-          <h3>Inicio</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam alias commodi maiores aperiam ipsum
-            magnam similique.</p>
-          <a href="#"></a>
-      </article>
-
-      <article class="card">
-        <img src="IMG/Jiren.webp" alt="400">
-        <div class="contenido">
-          <h3>Inicio</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam alias commodi maiores aperiam ipsum
-            magnam similique.</p>
-          <a href="#"></a>
-      </article>
-
-      <article class="card">
-        <img src="IMG/kaio del este.webp" alt="400">
-        <div class="contenido">
-          <h3>Inicio</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam alias commodi maiores aperiam ipsum
-            magnam similique.</p>
-          <a href="#"></a>
-      </article>
-
-      <article class="card">
-        <img src="IMG/Kaio del oeste.webp" alt="400">
-        <div class="contenido">
-          <h3>Inicio</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam alias commodi maiores aperiam ipsum
-            magnam similique.</p>
-          <a href="#"></a>
-      </article>
-
-      <article class="card">
-        <img src="IMG/kaio-shin del este.webp" alt="400">
-        <div class="contenido">
-          <h3>Inicio</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam alias commodi maiores aperiam ipsum
-            magnam similique.</p>
-          <a href="#"></a>
-      </article>
-
-      <article class="card">
-        <img src="IMG/Kaio-shin del norte.webp" alt="400">
-        <div class="contenido">
-          <h3>Inicio</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam alias commodi maiores aperiam ipsum
-            magnam similique.</p>
-          <a href="#"></a>
-      </article>
-
-      <article class="card">
-        <img src="IMG/Kaio-shin_del_este_Artwork.webp" alt="400">
-        <div class="contenido">
-          <h3>Inicio</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam alias commodi maiores aperiam ipsum
-            magnam similique.</p>
-          <a href="#"></a>
-      </article>
-
-      <article class="card">
-        <img src="IMG/Kaio-shin_del_Sur_Dokkan.webp" alt="400">
-        <div class="contenido">
-          <h3>Inicio</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam alias commodi maiores aperiam ipsum
-            magnam similique.</p>
-          <a href="#"></a>
-      </article>
-
-      <article class="card">
-        <img src="IMG/Kibito_Artwork.webp" alt="400">
-        <div class="contenido">
-          <h3>Inicio</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam alias commodi maiores aperiam ipsum
-            magnam similique.</p>
-          <a href="#"></a>
-      </article>
-
-      <article class="card">
-        <img src="IMG/Kibito_shin_Artwork.webp" alt="400">
-        <div class="contenido">
-          <h3>Inicio</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam alias commodi maiores aperiam ipsum
-            magnam similique.</p>
-          <a href="#"></a>
-      </article>
-
-      <article class="card">
-        <img src="IMG/Krilin_Universo7.webp" alt="400">
-        <div class="contenido">
-          <h3>Inicio</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam alias commodi maiores aperiam ipsum
-            magnam similique.</p>
-          <a href="#"></a>
-      </article>
-
-      <article class="card">
-        <img src="IMG/Lunch_traje_de_sirvienta_en_el_manga.webp" alt="400">
-        <div class="contenido">
-          <h3>Inicio</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam alias commodi maiores aperiam ipsum
-            magnam similique.</p>
-          <a href="#"></a>
-      </article>
-
-      <article class="card">
-        <img src="IMG/Marcarita.webp" alt="400">
-        <div class="contenido">
-          <h3>Inicio</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam alias commodi maiores aperiam ipsum
-            magnam similique.</p>
-          <a href="#"></a>
-      </article>
-
-      <article class="card">
-        <img src="IMG/Mr_Satan_DBSuper.webp" alt="400">
-        <div class="contenido">
-          <h3>Inicio</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam alias commodi maiores aperiam ipsum
-            magnam similique.</p>
-          <a href="#"></a>
-      </article>
-
-      <article class="card">
-        <img src="IMG/Nail_Artwork.webp" alt="400">
-        <div class="contenido">
-          <h3>Inicio</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam alias commodi maiores aperiam ipsum
-            magnam similique.</p>
-          <a href="#"></a>
-      </article>
-
-      <article class="card">
-        <img src="IMG/picolo_normal.webp" alt="400">
-        <div class="contenido">
-          <h3>Inicio</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam alias commodi maiores aperiam ipsum
-            magnam similique.</p>
-          <a href="#"></a>
-      </article>
-
-      <article class="card">
-        <img src="IMG/Raditz_artwork_Dokkan.webp" alt="400">
-        <div class="contenido">
-          <h3>Inicio</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam alias commodi maiores aperiam ipsum
-            magnam similique.</p>
-          <a href="#"></a>
-      </article>
-
-      <article class="card">
-        <img src="IMG/roshi.webp" alt="400">
-        <div class="contenido">
-          <h3>Inicio</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam alias commodi maiores aperiam ipsum
-            magnam similique.</p>
-          <a href="#"></a>
-      </article>
-
-      <article class="card">
-        <img src="IMG/Shin_en_Bucchigiri_Match.webp" alt="400">
-        <div class="contenido">
-          <h3>Inicio</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam alias commodi maiores aperiam ipsum
-            magnam similique.</p>
-          <a href="#"></a>
-      </article>
-
-      <article class="card">
-        <img src="IMG/Tenshinhan_Universo7.webp" alt="400">
-        <div class="contenido">
-          <h3>Inicio</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam alias commodi maiores aperiam ipsum
-            magnam similique.</p>
-          <a href="#"></a>
-      </article>
-
-      <article class="card">
-        <img src="IMG/Toppo.webp" alt="400">
-        <div class="contenido">
-          <h3>Inicio</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam alias commodi maiores aperiam ipsum
-            magnam similique.</p>
-          <a href="#"></a>
-      </article>
-
-      <article class="card">
-        <img src="IMG/Trunks_Buu_Artwork.webp" alt="400">
-        <div class="contenido">
-          <h3>Inicio</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam alias commodi maiores aperiam ipsum
-            magnam similique.</p>
-          <a href="#"></a>
-      </article>
-
-      <article class="card">
-        <img src="IMG/vegeta_normal.webp" alt="400">
-        <div class="contenido">
-          <h3>Inicio</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam alias commodi maiores aperiam ipsum
-            magnam similique.</p>
-          <a href="#"></a>
-      </article>
-
-      <article class="card">
-        <img src="IMG/Vermoud.webp" alt="400">
-        <div class="contenido">
-          <h3>Inicio</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam alias commodi maiores aperiam ipsum
-            magnam similique.</p>
-          <a href="#"></a>
-      </article>
-
-      <article class="card">
-        <img src="IMG/Whis_DBS_Broly_Artwork.webp" alt="400">
-        <div class="contenido">
-          <h3>Inicio</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam alias commodi maiores aperiam ipsum
-            magnam similique.</p>
-          <a href="#"></a>
-      </article>
-
-      <article class="card">
-        <img src="IMG/zarbon.webp" alt="400">
-        <div class="contenido">
-          <h3>Inicio</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam alias commodi maiores aperiam ipsum
-            magnam similique.</p>
-          <a href="#"></a>
-      </article>
-
-      <article class="card">
-        <img src="IMG/Zeno_Artwork.webp" alt="400">
-        <div class="contenido">
-          <h3>Inicio</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam alias commodi maiores aperiam ipsum
-            magnam similique.</p>
-          <a href="#"></a>
-      </article>
-
+        <button
+          class="btn btn--icon header__menu-btn"
+          type="button"
+          id="nav-toggle"
+          aria-expanded="false"
+          aria-controls="primary-nav"
+          aria-label="Abrir menú de navegación"
+        >
+          <span class="header__menu-icon" aria-hidden="true"></span>
+        </button>
       </div>
 
+      <nav class="nav" id="primary-nav" aria-label="Navegación principal">
+        <ul class="nav__list">
+          <li class="nav__item"><a class="nav__link" href="#main">Inicio</a></li>
+          <li class="nav__item"><a class="nav__link" href="#galeria">Galería</a></li>
+          <li class="nav__item"><a class="nav__link" href="#sobre">Sobre</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__content">
+        <p class="hero__brand">DB Gallery</p>
+        <h1 class="hero__title" id="hero-title">Personajes del universo Dragon Ball</h1>
+        <p class="hero__text">
+          Una galería responsive construida con HTML, CSS y JavaScript puro —
+          filtrable, accesible y lista para crecer.
+        </p>
+        <a class="btn btn--primary" href="#galeria">Explorar galería</a>
+      </div>
+    </section>
+
+    <section class="gallery" id="galeria" aria-labelledby="gallery-title">
+      <div class="gallery__intro">
+        <h2 class="gallery__title" id="gallery-title">Galería de personajes</h2>
+        <p class="gallery__lead">Busca por nombre o filtra por categoría.</p>
+      </div>
+
+      <div class="gallery__toolbar">
+        <div class="search">
+          <label class="search__label" for="search-input">Buscar personajes</label>
+          <input
+            class="search__input"
+            type="search"
+            id="search-input"
+            name="search"
+            placeholder="Ej. Goku, Freezer, Kaio…"
+            autocomplete="off"
+          >
+        </div>
+
+        <div class="chips" role="group" aria-label="Filtrar por categoría" id="category-filters">
+          <!-- Chips rendered by JS -->
+        </div>
+      </div>
+
+      <div class="gallery__controls">
+        <p class="gallery__status" id="gallery-status" role="status" aria-live="polite"></p>
+
+        <div class="page-size">
+          <label class="page-size__label" for="page-size">Por página</label>
+          <select class="page-size__select" id="page-size" name="page-size">
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="12" selected>12</option>
+            <option value="20">20</option>
+            <option value="24">24</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="gallery__grid" id="gallery-grid">
+        <!-- Cards rendered by JS -->
+      </div>
+
+      <nav class="pagination" id="pagination" aria-label="Paginación de la galería">
+        <!-- Controls rendered by JS -->
+      </nav>
+    </section>
+
+    <section class="about" id="sobre" aria-labelledby="about-title">
+      <div class="about__inner">
+        <h2 class="about__title" id="about-title">Sobre este proyecto</h2>
+        <p class="about__text">
+          Pieza de portafolio front-end: design tokens CSS, BEM, grid mobile-first,
+          menú accesible, dark mode con localStorage, filtros, paginación y
+          render desde un arreglo de datos — todo sin frameworks.
+        </p>
+      </div>
     </section>
   </main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <p class="footer__brand">DB Gallery</p>
+      <p class="footer__copy">Pieza de portafolio · HTML · CSS · JavaScript vanilla</p>
+    </div>
+  </footer>
+
+  <script src="main.js" defer></script>
 </body>
-
-</html>
-</section>
-
-</section>
-</main>
-</body>
-
 </html>
